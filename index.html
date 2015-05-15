@@ -6,14 +6,14 @@
     </head>
     
     <body ng-controller="LoginController">
-        <h1>Promotora de Crédito</h1>
+        <h1>{{title}}</h1>
         <form>
             <fieldset>
                 
                 <legend>Login</legend><br>
-                <label for="user">Usuário:</label><input id="user" name="user" type="text" ng-model="login.user" /><br><br>
+                <label for="user">Usuário:</label><select id="user" name="user" type="checkbox" ng-model="login.user" ><option value="">--Selecione o usuário--</option><option value="a">Usuário A</option><option value="b">Usuário B</option></select><br><br>
                 <label for="key">Senha:</label><input id="key" name="key" type="text" ng-model="login.key" /><br><br>
-                <button ng-click="autenticar()">Entrar</button>
+                <button ng-disabled="login.key===''" ng-click="autenticar()">Entrar</button>
             </fieldset>
         </form>
     </body>
