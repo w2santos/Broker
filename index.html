@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    
+    <body ng-controller="LoginController">
+        <h1>Promotora de Crédito</h1>
+        <form>
+            <fieldset>
+                
+                <legend>Login</legend><br>
+                <label for="user">Usuário:</label><input id="user" name="user" type="text" ng-model="login.user" /><br><br>
+                <label for="key">Senha:</label><input id="key" name="key" type="text" ng-model="login.key" /><br><br>
+                <button ng-click="autenticar()">Entrar</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
