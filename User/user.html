@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Usuários</title>
+        <link rel="stylesheet" type="text/css" href="user.css">
+    </head>
+    <body ng-controller="UserController">
+        <h1>Usuários</h1>
+        <div class="wrapper">
+        <div class="contact-item" ng-repeat="user in users | orderBy:'name'">
+            <div class="names"> {{user.name}}</div>
+            <div class="keyAdmin">Senha: {{user.key}}</div>
+            <div class="keyAdmin">Admin: {{user.admin}}</div>
+        </div>
+        </div>
+        <br/>
+        
+        <!--form to add new user-->
+        <center><button ng-click="ShowForm()" ng-hide="formVisibility">Adicionar usuário</button></center>
+        <div ng-show="formVisibility" class="wrapper">
+            <h2>Adicionar usuário</h2>
+            Nome:<input type="text" name="name" ng-model="newUser.name"></intput>
+            Senha:<input type="password" name="password" ng-model="newUser.key"></intput>
+            Admin:<input type="checkbox" name="admin" ng-model="newUser.admin"></intput>
+            <button ng-click="Save()">Guardar</button>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="userCtrl.js" type="text/javascript"></script>
+    </body>
+</html>
