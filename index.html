@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="app">
     <head>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-        <script src="script.js"></script>
+        <meta charset="utf-8">
+        <title>Lima & LIma - Promotora de Crédito</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
-    
     <body ng-controller="LoginController">
-        <h1>{{title}}</h1>
-        <form>
-            <fieldset>
-                
-                <legend>Login</legend><br>
-                <label for="user">Usuário:</label><select id="user" name="user" type="checkbox" ng-model="login.user" ><option value="">--Selecione o usuário--</option><option value="a">Usuário A</option><option value="b">Usuário B</option></select><br><br>
-                <label for="key">Senha:</label><input id="key" name="key" type="text" ng-model="login.key" /><br><br>
-                <button ng-disabled="login.key===''" ng-click="autenticar()">Entrar</button>
-            </fieldset>
-        </form>
+        <p>
+        <div class="wrapper">
+            <h1>{{title}}</h1>
+            <label for="user">Usuário:</label>
+                <select id="user" class="fieldUser" name="user" type="checkbox" ng-model="login.user" >
+                    <option value="">--Selecione o usuário--</option>
+                    <option value="a">Usuário A</option>
+                    <option value="b">Usuário B</option>
+                </select><br/><br/>
+            
+            <label for="key">Senha:</label>
+                <input id="key" class="fieldKey" name="key" type="password" ng-model="login.key" /><br/><br/>
+            
+            <div class="buttonEnter">
+                <button ng-click="autenticar()">Entrar</button>
+            </div>
+        </div>
+        </p>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="script.js" type="text/javascript"></script>
     </body>
 </html>

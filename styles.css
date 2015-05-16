@@ -1,0 +1,44 @@
+body{
+    font-family: sans-serif;
+    font-weight: 100;
+    background: #ccc
+}
+h1{
+    text-align: center;
+    color: #666;
+    text-shadow: 0px 2px 0px #fff;
+    border-radius: 15px;
+}
+.fieldUser{
+    width: 230px;
+    margin-left:0px;
+    font-size: 22px;
+}
+.fieldKey{
+    width: 223px;
+    margin-left:10px;
+    font-size: 12px;
+}
+.wrapper{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 200px; 
+    box-shadow: 5px 5px #555;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+}
+button{
+    background: :#080;
+    color:#fff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 5px auto;
+    text-align: center;
+}
+button:hover{
+    background: #0A0;
+}
+.buttonEnter{
+    text-align: center;
+}

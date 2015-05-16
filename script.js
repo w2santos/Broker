@@ -5,4 +5,10 @@ function LoginController($scope){
         user:"",
         key:""
     }
+        
+    $scope.title="Login";
+    
+    $scope.autenticar=function(){
+        $scope.title="Bem vindo!";
+    }
 }
